@@ -1,5 +1,6 @@
-# DebugLogLibrary for Unreal Engine 5 (UE5)
 <!-- Copyright (c) 2026 haozena. All Rights Reserved. -->
+
+# DebugLogLibrary
 
 <img src="Resources/Icon128.png" alt="DebugLogLibrary icon" width="128">
 
@@ -31,7 +32,34 @@ The plugin descriptor currently targets Unreal Engine 5.8 explicitly. Rebuild th
 
 ## Installation
 
-1. Copy the `DebugLogLibrary` folder into your project's `Plugins` directory:
+### Step 1: Get the Plugin from Fab
+
+Both installation methods require you to acquire the plugin from Fab first. The Unreal Engine plugin download is handled through the Fab Library in the Epic Games Launcher.
+
+1. Sign in to [Fab](https://www.fab.com/) with your Epic Games account.
+2. Search for **DebugLogLibrary** and open its product page.
+3. Select **Add to My Library** for a free listing, or complete the purchase for a paid listing.
+4. Open the Epic Games Launcher and go to **Unreal Engine > Library > Fab Library**. Refresh the Fab Library if the plugin does not appear immediately.
+
+After the plugin appears in your Fab Library, choose one of the following installation methods.
+
+### Method 1: Install to the Engine (Recommended)
+
+This method makes the plugin available to every project that uses the selected Unreal Engine installation.
+
+1. Find **DebugLogLibrary** in the Epic Games Launcher's **Fab Library**.
+2. Click **Install to Engine**.
+3. Select a supported Unreal Engine version, then click **Install**. This release targets Unreal Engine 5.8.
+4. Open your project with that engine version.
+5. If necessary, enable **DebugLogLibrary** under **Edit > Plugins**, then restart the editor when prompted.
+
+### Method 2: Install to a Single Project
+
+Use a project-level installation when the plugin must travel with source control, remain isolated to one project, or be modified locally.
+
+1. Obtain the plugin package through Fab as described above. If Fab installs the plugin to the engine first, locate the installed `DebugLogLibrary` folder under that engine's `Engine/Plugins` directory.
+2. Close Unreal Editor.
+3. Copy the complete `DebugLogLibrary` folder into your project's `Plugins` directory:
 
    ```text
    YourProject/
@@ -42,10 +70,13 @@ The plugin descriptor currently targets Unreal Engine 5.8 explicitly. Rebuild th
            `-- Source/
    ```
 
-2. Open the project in Unreal Engine.
-3. Enable **DebugLogLibrary** in **Edit > Plugins** if it is not enabled automatically.
-4. Restart the editor when prompted.
-5. Build the project or package the plugin for the required target platform.
+4. Confirm that `YourProject/Plugins/DebugLogLibrary/DebugLogLibrary.uplugin` exists.
+5. Open the project. If Unreal Engine requests a module rebuild, build the project for the target engine and platform.
+6. If necessary, enable **DebugLogLibrary** under **Edit > Plugins**, then restart the editor when prompted.
+
+Use only one copy of the plugin for a given project. Remove or disable a duplicate project-level copy if the same plugin is already being loaded from the engine installation.
+
+For the official Fab plugin workflow, see [Working with Plugins in Unreal Engine](https://dev.epicgames.com/documentation/en-us/unreal-engine/working-with-plugins-in-unreal-engine).
 
 For C++ projects, add the module to the appropriate dependency list in your project's `.Build.cs` file:
 
@@ -268,4 +299,3 @@ By default, the plugin defines `USE_LOGGING_IN_SHIPPING` as `0`, so its logging 
 ## Copyright
 
 Copyright (c) 2026 haozena. All Rights Reserved.
-

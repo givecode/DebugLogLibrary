@@ -34,7 +34,34 @@ DebugLogLibrary 是一个 Unreal Engine 运行时日志插件，提供蓝图节�
 
 ## 安装
 
-1. 将 `DebugLogLibrary` 文件夹复制到项目的 `Plugins` 目录：
+### 第一步：从 Fab 获取插件
+
+无论选择哪种安装方式，都必须先从 Fab 获取插件。Unreal Engine 插件的实际下载由 Epic Games Launcher 中的 Fab Library 完成。
+
+1. 使用 Epic Games 账户登录 [Fab](https://www.fab.com/)。
+2. 搜索 **DebugLogLibrary** 并打开其产品页面。
+3. 如果是免费插件，请选择 **Add to My Library**；如果是付费插件，请完成购买。
+4. 打开 Epic Games Launcher，进入 **Unreal Engine > Library > Fab Library**。如果插件没有立即出现，请刷新 Fab Library。
+
+插件出现在 Fab Library 后，从以下两种安装方式中选择一种。
+
+### 方式一：安装到引擎（推荐）
+
+这种方式会让使用该 Unreal Engine 安装版本的所有项目都能使用此插件。
+
+1. 在 Epic Games Launcher 的 **Fab Library** 中找到 **DebugLogLibrary**。
+2. 点击 **Install to Engine**。
+3. 选择受支持的 Unreal Engine 版本，然后点击 **Install**。当前版本面向 Unreal Engine 5.8。
+4. 使用该引擎版本打开项目。
+5. 如有需要，在 **编辑 > 插件** 中启用 **DebugLogLibrary**，并根据提示重新启动编辑器。
+
+### 方式二：安装到单个项目
+
+如果插件需要随源码管理提交、仅供一个项目使用，或者需要在本地修改，请采用项目级安装。
+
+1. 按照上述步骤通过 Fab 获取插件包。如果 Fab 首先将插件安装到了引擎，请在该引擎的 `Engine/Plugins` 目录下找到已经安装的 `DebugLogLibrary` 文件夹。
+2. 关闭 Unreal Editor。
+3. 将完整的 `DebugLogLibrary` 文件夹复制到项目的 `Plugins` 目录：
 
    ```text
    YourProject/
@@ -45,10 +72,13 @@ DebugLogLibrary 是一个 Unreal Engine 运行时日志插件，提供蓝图节�
            `-- Source/
    ```
 
-2. 使用 Unreal Engine 打开项目。
-3. 如果插件没有自动启用，请在 **编辑 > 插件** 中启用 **DebugLogLibrary**。
-4. 根据提示重新启动编辑器。
-5. 构建项目，或针对所需目标平台打包插件。
+4. 确认 `YourProject/Plugins/DebugLogLibrary/DebugLogLibrary.uplugin` 文件存在。
+5. 打开项目。如果 Unreal Engine 提示需要重新构建模块，请针对目标引擎和平台构建项目。
+6. 如有需要，在 **编辑 > 插件** 中启用 **DebugLogLibrary**，并根据提示重新启动编辑器。
+
+同一个项目只应使用一份插件。如果引擎安装目录中已经加载了该插件，请移除或禁用项目中的重复副本。
+
+Fab 插件的官方操作流程请参阅：[在 Unreal Engine 中使用插件](https://dev.epicgames.com/documentation/en-us/unreal-engine/working-with-plugins-in-unreal-engine)。
 
 对于 C++ 项目，请在项目的 `.Build.cs` 文件中将该模块加入适当的依赖列表：
 
