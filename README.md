@@ -166,7 +166,6 @@ The formatted output includes the optional context object name, prefix, message,
 | `PrintFunctionToBeImplemented` | Logs a warning identifying an unimplemented function. |
 | `PrintFunctionISIncomplete` | Logs a warning identifying an incomplete function. |
 | `PrintVLog` | Writes directly to the Visual Logger using the selected severity. |
-| `Execute Sample function` | Pass-through test node used to verify that the plugin is available. |
 
 ## Visual Logger
 
@@ -286,10 +285,9 @@ By default, the plugin defines `USE_LOGGING_IN_SHIPPING` as `0`, so its logging 
 
 ## Current Implementation Notes
 
-- Decimal integer output is implemented.
-- Binary, hexadecimal, octal, and Roman-numeral conversion helpers are currently placeholders and return empty strings. Selecting these formats in `PrintNumberInt` will therefore produce an empty formatted value until those converters are implemented.
+- Decimal, binary, hexadecimal, and octal integer output is implemented. Hexadecimal output uses uppercase digits without a prefix; binary and octal output also omit prefixes. Negative values retain a leading minus sign.
+- Roman-numeral conversion uses standard notation for values from 1 through 3999. Zero, negative values, and values above 3999 fall back to decimal text instead of returning an empty string.
 - `PrintVLog` always targets the Visual Logger. Its `VLog` and `Settings` inputs are retained for API consistency but are not currently used by that function.
-- The sample function is intended for plugin verification rather than production logging.
 
 ## Support
 

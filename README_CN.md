@@ -168,7 +168,6 @@ PrivateDependencyModuleNames.AddRange(
 | `PrintFunctionToBeImplemented` | 输出警告，标识尚未实现的函数。 |
 | `PrintFunctionISIncomplete` | 输出警告，标识尚未完成的函数。 |
 | `PrintVLog` | 使用选定的严重级别直接写入 Visual Logger。 |
-| `Execute Sample function` | 用于验证插件是否可用的传值测试节点。 |
 
 ## Visual Logger
 
@@ -288,10 +287,9 @@ ULOG_PRINT_ERROR_VIEWPORT(TEXT("Operation failed"));
 
 ## 当前实现说明
 
-- 十进制整数输出已经实现。
-- 二进制、十六进制、八进制和罗马数字转换辅助函数目前仍是占位实现，并返回空字符串。因此，在 `PrintNumberInt` 中选择这些格式时，格式化数值将为空，直至相应转换函数完成实现。
+- 十进制、二进制、十六进制和八进制整数输出均已实现。十六进制使用大写字母且不添加前缀，二进制和八进制同样不添加前缀；负数保留前导负号。
+- 罗马数字转换对 1 至 3999 使用标准写法。零、负数以及大于 3999 的数值会回退为十进制文本，不再返回空字符串。
 - `PrintVLog` 始终以 Visual Logger 为输出目标。其 `VLog` 和 `Settings` 输入为了保持 API 一致性而保留，但当前函数没有使用它们。
-- 示例函数用于验证插件，而不是用于正式日志功能。
 
 ## 支持与反馈
 
