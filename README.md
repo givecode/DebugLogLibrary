@@ -1,6 +1,6 @@
 <!-- Copyright (c) 2026 haozena. All Rights Reserved. -->
 
-# DebugLogLibrary
+# DebugLogLibrary Plugin for Unreal Engine 5 (UE5)
 
 <img src="Resources/Icon128.png" alt="DebugLogLibrary icon" width="128">
 

@@ -1,6 +1,6 @@
 <!-- Copyright (c) 2026 haozena. All Rights Reserved. -->
 
-# DebugLogLibrary for Unreal Engine 5 (UE5)
+# DebugLogLibrary Plugin for Unreal Engine 5 (UE5)
 
 简体中文 | [English](README.md)
 
