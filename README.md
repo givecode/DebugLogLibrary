@@ -11,7 +11,7 @@ DebugLogLibrary is a runtime logging plugin for Unreal Engine. It provides Bluep
 | Item | Value |
 | --- | --- |
 | Plugin version | 5.8.1 |
-| Unreal Engine | 5.8 |
+| Unreal Engine | 5.4-5.8 |
 | Platforms | No explicit platform allow list |
 | Module type | Runtime |
 | Loading phase | Earliest Possible |
@@ -49,7 +49,7 @@ This method makes the plugin available to every project that uses the selected U
 
 1. Find **DebugLogLibrary** in the Epic Games Launcher's **Fab Library**.
 2. Click **Install to Engine**.
-3. Select a supported Unreal Engine version, then click **Install**. This release targets Unreal Engine 5.8.
+3. Select a supported Unreal Engine version, then click **Install**. This release targets Unreal Engine 5.4-5.8.
 4. Open your project with that engine version.
 5. If necessary, enable **DebugLogLibrary** under **Edit > Plugins**, then restart the editor when prompted.
 
