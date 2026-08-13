@@ -13,7 +13,7 @@ DebugLogLibrary 是一个 Unreal Engine 运行时日志插件，提供蓝图节�
 | 项目 | 值 |
 | --- | --- |
 | 插件版本 | 5.8.1 |
-| Unreal Engine | 5.8 |
+| Unreal Engine | 5.4-5.8 |
 | 平台 | 未设置明确的平台白名单 |
 | 模块类型 | Runtime |
 | 加载阶段 | Earliest Possible |
@@ -51,7 +51,7 @@ DebugLogLibrary 是一个 Unreal Engine 运行时日志插件，提供蓝图节�
 
 1. 在 Epic Games Launcher 的 **Fab Library** 中找到 **DebugLogLibrary**。
 2. 点击 **Install to Engine**。
-3. 选择受支持的 Unreal Engine 版本，然后点击 **Install**。当前版本面向 Unreal Engine 5.8。
+3. 选择受支持的 Unreal Engine 版本，然后点击 **Install**。当前版本面向 Unreal Engine 5.4-5.8。
 4. 使用该引擎版本打开项目。
 5. 如有需要，在 **编辑 > 插件** 中启用 **DebugLogLibrary**，并根据提示重新启动编辑器。
 
