@@ -18,7 +18,6 @@ DebugLogLibrary 是一个 Unreal Engine 运行时日志插件，提供蓝图节�
 | 模块类型 | Runtime |
 | 加载阶段 | Earliest Possible |
 
-当前插件描述文件明确指定 Unreal Engine 5.8。用于其他引擎版本前，请从源码重新构建插件。
 
 ## 功能特性
 
