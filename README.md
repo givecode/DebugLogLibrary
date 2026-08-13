@@ -16,7 +16,7 @@ DebugLogLibrary is a runtime logging plugin for Unreal Engine. It provides Bluep
 | Module type | Runtime |
 | Loading phase | Earliest Possible |
 
-The plugin descriptor currently targets Unreal Engine 5.8 explicitly. Rebuild the plugin from source before using it with another engine version.
+
 
 ## Features
 
